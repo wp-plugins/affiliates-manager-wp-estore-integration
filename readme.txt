@@ -3,7 +3,7 @@ Contributors: wp.insider, wpaffiliatemgr, affmngr
 Donate link: https://wpaffiliatemanager.com/
 Tags: affiliate, affiliates, digital downloads, download, downloads, sell downloads, affiliates manager, integration, eStore, checkout
 Requires at least: 3.8
-Tested up to: 4.1
+Tested up to: 4.2
 Stable tag: 1.0
 License: GPLv2 or later
 
@@ -17,7 +17,7 @@ When a user pay for an item on your site, this addon will check to see if the us
 
 This addon requires the [Affiliates Manager](https://wordpress.org/plugins/affiliates-manager/) and [WP eStore](https://www.tipsandtricks-hq.com/wordpress-estore-plugin-complete-solution-to-sell-digital-products-from-your-wordpress-blog-securely-1059) plugins.
 
-Read the usage instructions [here](https://wpaffiliatemanager.com/affiliates-manager-sell-digital-downloads-integration/)
+Read the usage instructions [here](https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/)
 
 == Installation ==
 

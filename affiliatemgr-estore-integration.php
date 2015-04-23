@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Affiliates Manager WP eStore Integration
-Plugin URI: https://wpaffiliatemanager.com
+Plugin URI: https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/
 Description: Process an affiliate commission via Affiliates Manager after a WP eStore checkout.
 Version: 1.0
 Author: wp.insider, wpaffiliatemgr, affmngr
