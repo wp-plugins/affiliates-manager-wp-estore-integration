@@ -3,7 +3,7 @@
 Plugin Name: Affiliates Manager WP eStore Integration
 Plugin URI: https://wpaffiliatemanager.com/affiliates-manager-wp-estore-integration/
 Description: Process an affiliate commission via Affiliates Manager after a WP eStore checkout.
-Version: 1.0
+Version: 1.0.2
 Author: wp.insider, wpaffiliatemgr, affmngr
 Author URI: https://wpaffiliatemanager.com
 */
@@ -30,7 +30,21 @@ add_action("eStore_product_database_updated_after_payment", "wpam_eStore_databas
 
 function wpam_eStore_add_custom_parameters($custom_field_val)
 {
-    if(isset($_COOKIE[WPAM_PluginConfig::$RefKey]))
+    if(isset($_COOKIE['wpam_id']))
+    {
+        $name = 'wpam_tracking';
+        $value = $_COOKIE['wpam_id'];
+        $new_val = $name.'='.$value;
+        $current_val = $custom_field_val;
+        if(empty($current_val)){
+            $custom_field_val = $new_val;
+        }
+        else{
+            $custom_field_val = $current_val.'&'.$new_val;
+        }
+        WPAM_Logger::log_debug('WP eStore Integration - Adding custom field value. New value: '.$custom_field_val);
+    }
+    else if(isset($_COOKIE[WPAM_PluginConfig::$RefKey]))
     {
         $name = 'wpam_tracking';
         $value = $_COOKIE[WPAM_PluginConfig::$RefKey];
